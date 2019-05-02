@@ -45,3 +45,11 @@ Start the application
 ```bash
 npm start
 ```
+
+## Testing
+
+Run command line
+
+```bash
+npm test
+```
