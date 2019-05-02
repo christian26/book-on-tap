@@ -1,47 +1,47 @@
-# Capital On tap Frontend Challenge v1
+# Book on tab
 
-This is our challenge for the front-end developer position at [Capital On Tap](https://capitalontap.com/en).
+An API application to show a list of books and and the details of the book.
 
-You're probably already participating in our hiring process, but if you stumble here by accident, read the document to the end and if you are interested, you can start the process from here.
+## Packages installed
 
-If you are not a developer, you can have a look at our other opportunities at our [careers page](https://capitalontap.com/en/careers).
+React Router 
+- React Router to navigate to components and have URLs for the app 
+- npm install --save react-router
 
-## About the challenge
+React Router DOM
+- React Router It contains the DOM bindings for React Router.
+- npm install --save react-router-dom
 
-This is a challenge, not a test, so feel free to try different approaches to solve it.
+Material UI
+- npm install --save @material-ui/core
+- Material UI CSS framework to help set up the design of the application
 
-What we expect to learn from you with this challenge:
+## Features
 
-- Your work style.
-- How you think and solve problems.
-- How you communicate.
+- Responsive desktop and mobile
+- Styled UI
 
-What we expect that you learn from us:
+## Testing
 
-- How we work as a team.
-- Have a close look at some of the problems we face daily.
+- Jest testing library from Facebook. To test the JavaScript Application
+- npm add --dev react-test-renderer
 
-## Considerations
+## Installation
 
-- We won't limit your choice of tools or libraries. But make choices that suits your needs. There's no need to use a bazooka to kill an ant but the point of the challenge is to evaluate your skills.
+Clone this respo and.
 
-## Instructions
+```bash
+git clone https://github.com/christian26/book-on-tap.git
+```
 
-Consider the ficticious company "Books on Tap" that sells books online. We created a very simple api where you can query and create books.
+Install node packeages
 
-Api url and docs - https://booksontap.azurewebsites.net/
+```bash
+npm install
+```
 
-We have built a simple project based on Create-React-App for ease of development and not having to worry about configs. Feel free to create your own project structure if you so please.
+Start the application 
 
-You can start by cloning this repo to your machine.
-
-**When you are done, please send us back the source and any other items in a zip file.**
-
-### Tasks:
-
-- Query api to retrieve books and list them
-- When clicking in one of the listed books, should navigate to a page where it can be seen more details of the book - for example if book is available or not and who is the author.
-
-Feel free to build the UI however you please.
-
-Extra points for creativity ✨
+```bash
+npm start
+```
