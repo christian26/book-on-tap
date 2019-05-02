@@ -31,6 +31,10 @@ const styles = theme => ({
     },
     price: {
         flex: 'auto' 
+    },
+    stock: {
+        color: 'red',
+        flex: 'auto'
     }
 })
 
@@ -50,7 +54,7 @@ class Book extends Component {
             <Grid container className={classes.root} spacing={16}>                                    
                 <Grid item xs={12}>
                     <Grid container className={classes.demo} justify="center" spacing={Number(spacing)}>
-                        <Grid item xs={8} key={book.id}>
+                        <Grid item xs={12} sm={8} key={book.id}>
                             <Card className={classes.card}>                                
                                 <CardMedia
                                     className={classes.media}
@@ -73,6 +77,13 @@ class Book extends Component {
                                         Price £{book.price}
                                     </Typography>                                          
                                 </CardActions>
+                                <CardActions justify="center">                                
+                                    { book.stockAmount === 0 ? (
+                                        <Typography gutterBottom  component="p" className={classes.stock}>
+                                            Stock out of order
+                                        </Typography>
+                                    ): '' }                              
+                                </CardActions> 
                                 <CardActions>                                         
                                     <Link to="/" className={classes.link}>     
                                         <Button variant="contained" color="primary" className={classes.button}>

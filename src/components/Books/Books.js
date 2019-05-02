@@ -21,6 +21,7 @@ const styles = theme => ({
     },   
     card: {
         maxWidth: 400,
+        margin: 'auto'
     },
     link: {
         textDecoration: 'none',
@@ -30,6 +31,10 @@ const styles = theme => ({
         margin: theme.spacing.unit,                       
     },
     price: {
+        flex: 'auto'
+    },
+    stock: {
+        color: 'red',
         flex: 'auto'
     }
 })
@@ -47,8 +52,9 @@ class Books extends Component {
         const ListBooks = books.map((book) => {
             const { firstName = '' } = book.author
             const { lastName = '' } = book.author
+                       
             return (                
-                <Grid item xs={4} key={book.id}>
+                <Grid item xs={12} sm={4} key={book.id}>
                     <Link to={`book/${book.id}`} className={classes.link}>
                         <Card className={classes.card}>
                             <CardHeader                                                        
@@ -63,7 +69,14 @@ class Books extends Component {
                             <CardActions justify="center">
                                 <Typography gutterBottom variant="h5" component="h2" className={classes.price}>
                                     Price £{book.price}
-                                </Typography>                                        
+                                </Typography>                                            
+                            </CardActions> 
+                            <CardActions justify="center">                                
+                                { book.stockAmount === 0 ? (
+                                    <Typography gutterBottom  component="p" className={classes.stock}>
+                                        Stock out of order
+                                    </Typography>
+                                ): '' }                              
                             </CardActions> 
                             <CardActions justify="center">                                
                                 <Button variant="contained" color="primary" className={classes.button}>
